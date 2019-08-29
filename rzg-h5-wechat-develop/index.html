@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>煜丰汴京烤鸭</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="./static/css/mobileBorder.css"/>
+    <link rel="stylesheet" type="text/css" href="./static/css/iconfont.css"/>
+    <!-- <script type="text/javascript" charset="utf-8" src="//g.alicdn.com/sd/nch5/index.js?t=2015052012"></script> -->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://img.hntv9hr.com/js/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	(function (doc, win) { // 手机端字体自适应
+			  var docEl = doc.documentElement,
+			  resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			  recalc = function () {
+			      var clientWidth = docEl.clientWidth;
+			      if (!clientWidth) return;
+			      if(clientWidth>=640){
+			          docEl.style.fontSize = '100px';
+			      }else{
+			          docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			      }
+			  };
+			  if (!doc.addEventListener) return;
+			  win.addEventListener(resizeEvt, recalc, false);
+			  doc.addEventListener('DOMContentLoaded', recalc, false);
+			  
+			})(document, window);
+    </script>
+    <style type="text/css">
+    
+    	*{
+    		box-sizing: border-box;
+    		/*font-family: "微软雅黑";*/
+    		font-family:Tahoma,Arial,Roboto,'Droid Sans','Helvetica Neue','Droid Sans Fallback','Heiti SC',sans-self;
+    	}
+			html{
+				min-height: 100vh;
+			}
+    	body{
+    		font-size: 0.25rem;
+    		background: #ebebeb;
+    		-webkit-overflow-scrolling: touch;
+				min-height: 100vh;
+    	}
+    	.font{
+				font-size: 0.25rem;
+			}
+			/* ._nc .stage1{
+				height: 38px;
+			}
+			._nc .stage1 .slider {
+				width: 100% !important;
+		    height: 38px !important;
+		    border-radius: 0px !important;
+		    box-shadow: 0 0 3px #999 !important;
+		    background-color: #ddd !important;
+		    left: 0;
+		  }
+		  ._nc .stage1 .button{
+		  	width: 50px;
+		  	height: 38px;
+		  	text-align: center;
+		  }
+		  ._nc .stage1 .icon{
+		  	font-size: 20px;
+		  	top: 8px;
+		  	left: 10px;
+		  }
+		  ._nc .stage1 .track div, ._nc .stage1 .label{
+		  	height: 38px;
+		  	line-height: 38px;
+		  	font-size: 0.25rem;
+		  }
+		  ._nc .stage1 .track div {
+		    border-radius: 0 !important;
+		    color: #fff !important;
+		  }
+		  ._nc .stage1 .bg-green {
+		    background-color: #fdb900 !important;
+		  }
+		  ._nc .stage1 .bg-red {
+		    background-color: #78c430 !important;
+		  } */
+		  
+		  
+    </style>
+  </head>
+  <body>
+		<div id="app"></div>
+		<script>
+			window.NVC_Opt = {
+				//无痕配置 && 滑动验证、刮刮卡、问答验证码通用配置
+				appkey: 'FFFF00000000018332DD',
+				scene: 'nvc_message_h5',
+				// appkey: 'CF_APP_1',
+				// scene: 'nvc_register',
+				isH5: true,
+				popUp: false,
+				renderTo: '#validateAgain',
+				trans: { "key1": "code0", "nvcCode": 400 },
+				language: "cn",
+				//滑动验证长度配置
+				customWidth: 300,
+				//刮刮卡配置项
+				width: 300,
+				height: 100,
+				elements: [
+					'//img.alicdn.com/tfs/TB17cwllsLJ8KJjy0FnXXcFDpXa-50-74.png',
+					'//img.alicdn.com/tfs/TB17cwllsLJ8KJjy0FnXXcFDpXa-50-74.png'
+				],
+				bg_back_prepared: '//img.alicdn.com/tps/TB1skE5SFXXXXb3XXXXXXXXXXXX-100-80.png',
+				bg_front: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABQCAMAAADY1yDdAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURefk5w+ruswAAAAfSURBVFjD7cExAQAAAMKg9U9tCU+gAAAAAAAAAIC3AR+QAAFPlUGoAAAAAElFTkSuQmCC',
+				obj_ok: '//img.alicdn.com/tfs/TB1rmyTltfJ8KJjy0FeXXXKEXXa-50-74.png',
+				bg_back_pass: '//img.alicdn.com/tfs/TB1KDxCSVXXXXasXFXXXXXXXXXX-100-80.png',
+				obj_error: '//img.alicdn.com/tfs/TB1q9yTltfJ8KJjy0FeXXXKEXXa-50-74.png',
+				bg_back_fail: '//img.alicdn.com/tfs/TB1w2oOSFXXXXb4XpXXXXXXXXXX-100-80.png',
+				upLang: {
+					"cn": {
+						_ggk_guide: "请在屏幕上滑动，刮出两面盾牌",
+						_ggk_success: "恭喜您成功刮出盾牌<br/>继续下一步操作吧",
+						_ggk_loading: "加载中",
+						_ggk_fail: ['呀，盾牌不见了<br/>请', "javascript:NoCaptcha.reset()", '再来一次', '或', "http://survey.taobao.com/survey/QgzQDdDd?token=%TOKEN", '反馈问题'],
+						_ggk_action_timeout: ['我等得太久啦<br/>请', "javascript:NoCaptcha.reset()", '再来一次', '或', "http://survey.taobao.com/survey/QgzQDdDd?token=%TOKEN", '反馈问题'],
+						_ggk_net_err: ['网络实在不给力<br/>请', "javascript:NoCaptcha.reset()", '再来一次', '或', "http://survey.taobao.com/survey/QgzQDdDd?token=%TOKEN", '反馈问题'],
+						_ggk_too_fast: ['您刮得太快啦<br/>请', "javascript:NoCaptcha.reset()", '再来一次', '或', "http://survey.taobao.com/survey/QgzQDdDd?token=%TOKEN", '反馈问题']
+					}
+				}
+			}
+		</script>
+		<script src="//g.alicdn.com/sd/nvc/1.1.112/guide.js"></script>
+		<script src="./static/js/vue-router.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="./static/js/axios.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./static/jigsaw/jigsaw.js" type="text/javascript" charset="utf-8"></script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
